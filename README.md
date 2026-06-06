@@ -21,7 +21,7 @@ _Full end-to-end A/B test measuring the impact of a redesigned checkout page on 
 
 <h2><a class="anchor" id="overview"></a>Overview</h2>
 
-This project runs a controlled A/B experiment to test whether a redesigned checkout page increases conversion rate and revenue per user on a fictional e-commerce platform, ShopEasy. The test ran across 10,000 users — 5,000 control, 5,000 treatment. The new page delivered a +3.18 percentage point conversion lift and +$3.02 revenue per user, both statistically significant at p < 0.0001 with 99.9% statistical power. The analysis covers EDA, normality checks, two-proportion Z-test, Welch's t-test, Cohen's effect size, 95% confidence intervals, and power analysis.
+This project runs a controlled A/B experiment to test whether a redesigned checkout page increases conversion rate and revenue per user on a fictional e-commerce platform, ShopEasy. The test ran across 10,000 users — 5,000 control, 5,000 treatment. The new page delivered a +3.18 percentage point conversion lift and +$3.02 revenue per user, both statistically significant at p < 0.0001 with 99.9% statistical power. The analysis covers EDA, normality checks, two-proportion Z-test, Welch's t-test, Cohen's effect size, 95% confidence intervals, and power analysis..
 
 ---
 
