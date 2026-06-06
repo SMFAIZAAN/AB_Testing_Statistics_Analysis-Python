@@ -108,20 +108,20 @@ ab-testing-shopeasy/
 - Control: 5,000 users | Treatment: 5,000 users — perfectly balanced split
 - Control: 479 conversions = 9.58% | Treatment: 638 conversions = 12.76%
 
-![EDA Group Overview](images/01_eda_overview.png)
+<img width="1935" height="771" alt="01_eda_overview" src="https://github.com/user-attachments/assets/67aa65a1-c4b0-488e-9b5b-f3bc3f5858d8" />
 
 **Key Metrics Comparison:**
 - Conversion Rate: 9.58% (control) vs 12.76% (treatment)
 - Revenue per User: $8.23 (control) vs $11.24 (treatment)
 - Avg Session Duration: 119s (control) vs 104s (treatment) — shorter sessions in treatment suggest a more frictionless checkout flow
 
-![Key Metrics](images/02_key_metrics.png)
+<img width="2235" height="741" alt="02_key_metrics" src="https://github.com/user-attachments/assets/b7c53c46-c69d-4939-b3dd-56af1de0dde0" />
 
 **Normality Check — Order Value (Buyers Only):**
 - Control mean order value: $85.9 | Treatment mean order value: $88.1
 - Histograms and Q-Q plots confirmed approximately normal distributions for buyers in both groups — justifying use of Welch's t-test for revenue comparison
 
-![Normality Checks](images/03_normality_checks.png)
+<img width="2085" height="1477" alt="03_normality_checks" src="https://github.com/user-attachments/assets/94c5417e-7f56-4aa7-bc44-c8f96f742e12" />
 
 ---
 
@@ -144,7 +144,7 @@ z_stat, p_value = proportions_ztest(counts, nobs)
 
 **95% CI — Conversion Rate Difference:** [+2.0%, +4.4%] — excludes 0 ✅
 
-![Confidence Intervals](images/06_confidence_intervals.png)
+<img width="2085" height="889" alt="06_confidence_intervals" src="https://github.com/user-attachments/assets/44d53e13-673c-454f-b25d-11d3a4f33b2f" />
 
 ---
 
@@ -164,7 +164,7 @@ t_stat, p_value = ttest_ind(
 **Answers:** Did the new page drive more revenue per user ($11.24 vs $8.23)?  
 → Yes. +$3.02 per user (p < 0.0001).
 
-![Statistical Significance](images/04_significance.png)
+<img width="2235" height="742" alt="04_significance" src="https://github.com/user-attachments/assets/568292d2-311d-400b-8d91-ffc47fd0915c" />
 
 ---
 
@@ -184,7 +184,7 @@ cohen_d = (mean_treatment - mean_control) / pooled_std
 **Answers:** How large is the practical impact?  
 → Both metrics are statistically significant but show negligible effect size. At n = 10,000, even small true differences will hit significance. Statistical significance does not equal practical significance.
 
-![Effect Size](images/05_effect_size.png)
+<img width="2235" height="742" alt="05_effect_size" src="https://github.com/user-attachments/assets/40a2f8e8-8bca-4a73-8a18-d2ecdba37b6d" />
 
 ---
 
@@ -201,7 +201,7 @@ power = analysis.solve_power(effect_size=cohen_h, nobs1=5000, alpha=0.05)
 **Answers:** Was the study adequately powered?  
 → Yes — well above the 80% threshold. The study was over-powered; only 1,533 users per group were needed to detect this effect. The large sample size is partly why a negligible effect still reached significance.
 
-![Power Curve](images/07_power_curve.png)
+<img width="1785" height="733" alt="07_power_curve" src="https://github.com/user-attachments/assets/33fde502-4710-4d8d-819e-d4a9712f2c8a" />
 
 ---
 
@@ -209,26 +209,7 @@ power = analysis.solve_power(effect_size=cohen_h, nobs1=5000, alpha=0.05)
 
 The final results dashboard consolidates conversion rates, revenue per user, session duration, 95% CI, and the power curve in a single view.
 
-![Final Dashboard](images/08_final_dashboard.png)
-
----
-
-<h2><a class="anchor" id="how-to-run-this-project"></a>How to Run This Project</h2>
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/ab-testing-shopeasy.git
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Open and run the notebook:
-```bash
-jupyter notebook notebooks/ab_testing_analysis.ipynb
-```
+<img width="2106" height="1650" alt="08_final_dashboard" src="https://github.com/user-attachments/assets/f0c865c4-e577-4651-bc14-7febf5d994ff" />
 
 ---
 
